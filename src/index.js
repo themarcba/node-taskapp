@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 require('./db/mongoose.connect') // Connect to DB
 
@@ -5,7 +7,7 @@ const userRouter = require('./routers/user.router')
 const taskRouter = require('./routers/task.router')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 const maintenance = false
 
 // Maintenance mode
